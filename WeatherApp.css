@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  font-family: "Dancing Script", cursive;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #f0f0f0; */
+  overflow: hidden;
+}
+
+/* ------------------------------container--------------------------------------- */
+#container {
+  width: 1280px;
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: #585757; */
+  margin: clamp(10px, 20px, 30px) auto;
+}
+
+/* ------------------------------header--------------------------------------- */
+#container1-header {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #585757; */
+  color: #fff;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  /* background: #432e2e; */
+}
+#F {
+  width: 100px;
+  height: 100px;
+}
+
+#cast-text {
+  position: relative;
+  right: 28px;
+  bottom: 16px;
+}
+
+/* -------------------container body:card------------------------- */
+
+#container2-body {
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  /* background: #8c1414; */
+  width: 40%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#body-top {
+  /* background: #413e3e; */
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#location {
+  font-size: clamp(14px, 20px, 20px);
+  margin: 2px;
+}
+#date {
+  font-size: clamp(14px, 20px, 20px);
+  margin: 2px;
+  margin-left: 14px;
+}
+#locIcon {
+  margin: 4px;
+  margin-right: 0px;
+}
+
+/* -------------------card middle------------------ */
+
+#body-mid {
+  /* background: #bc6666; */
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#tempreture {
+  font-size: clamp(1rem, 2vw, 3rem);
+  color: #fff;
+  text-align: center;
+  text-transform: lowercase;
+  font-weight: 400;
+  /* background: #8c1414; */
+  margin: 12px;
+  padding: 6px;
+  padding-left: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#unit {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  /* background: #000; */
+  font-size: 72px;
+  padding: 12px;
+}
+#info {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  /* background: #423131; */
+  padding: 6px;
+}
+
+#wind,
+#humidity {
+  padding: 6px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+#tempreture,
+#weather-icon {
+  width: 50%;
+  height: 40vh;
+}
+#weather-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: clamp(1rem, 2vw, 3rem);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* background: #8c1414; */
+  margin: 12px;
+  padding: 6px;
+  padding-left: 24px;
+}
+
+#weather-detail {
+  margin: 6px;
+  padding: 6px;
+  /* background: #0e0808; */
+  width: 180px;
+  text-align: center;
+}
+
+#W-icon {
+  margin: 6px;
+  margin-left: 24px;
+  padding: auto;
+}
+
+/* -------------search---------------------------- */
+
+#Search {
+  /* background: #220404; */
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+#search {
+  height: 36px;
+  width: 280px;
+  padding: 12px;
+  border-radius: 20px;
+  /* background: #000; */
+}
+
+#search-btn {
+  background: transparent;
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 3rem);
+  padding: 6px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
