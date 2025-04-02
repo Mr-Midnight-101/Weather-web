@@ -7,128 +7,77 @@
     <title>Weather-App</title>
   </head>
   <body>
-    <div id="container">
-      <div id="container1-header">
-        <span id="weather">Weather</span>
-        <div id="forecast">
-          <img src="./Assets/F.svg" alt="F" id="F" /><span id="cast-text"
-            >orecast</span
-          >
-        </div>
-      </div>
-      <div id="container2-body">
-        <!-- Top section of the body -->
-        <div id="body-top">
-          <img
-            id="locIcon"
-            width="24px"
-            height="24px"
-            src="./Assets/location.svg"
-            alt=""
-          />
-          <span id="location">Jabalpur</span>
-          <span id="date"></span>
-        </div>
-        <!-- Middle section of the body -->
-        <div id="body-mid">
-          <div id="tempreture">
-            <div id="unit">
-              <div id="temp"></div>
-              <div id="temp-unit">°C</div>
-            </div>
-            <div id="info">
-              <!-- Wind information -->
-              <div id="wind">
-                <img
-                  width="24px"
-                  height="24px"
-                  src="./Assets/wind.svg"
-                  alt=""
-                  id="icon"
-                />
-                <div id="wind-speed"></div>
-                <div id="wind-unit">km/h</div>
-              </div>
-              <!-- Humidity information -->
-              <div id="humidity">
-                <img
-                  width="24px"
-                  height="24px"
-                  src="./Assets/humidity.svg"
-                  alt=""
-                  id="icon"
-                />
-                <div id="humidity-value"></div>
-                <div id="humidity-unit">%</div>
-              </div>
-            </div>
-          </div>
-          <!-- Weather icon display -->
-          <div id="weather-icon">
-            <img
-              width="160px"
-              height="160px"
-              src="./Assets/clear.svg"
-              alt="weather"
-              id="W-icon"
-            />
-            <span id="weather-detail"></span>
+    <div id="Screen">
+      <div id="container">
+        <div id="container1-header">
+          <h1 id="weather" >Weather</h1>
+          <div id="Forecast" > <h1 id="remain" >orecast</h1>
           </div>
         </div>
-        <div id="Search">
-          <input type="text" id="search" placeholder="Search for a city..." />
-          <button id="search-btn">
-            <img
-              src="./Assets/search.svg"
-              width="30px"
-              height="30px"
-              alt=""
-              id="btn-icon"
-            />
+          <div id="Search">
+            <input type="text" id="search" placeholder="Search for a city..." />
+            <button id="search-btn" class="btn">
           </button>
         </div>
-      </div>
-    </div>
-  </body>
-  <script>
-    const apiKey = "deff1857e9444963ac928fa401b10e0a";
-    const apiUrl =
-      "https://api.openweathermap.org/data/2.5/weather?units=metric";
-
-    const city = document.getElementById("search");
-    const btn = document.getElementById("search-btn");
-    const weatherIcon = document.getElementById("W-icon")
-
-
-    async function getWeatherData(city) {
-      const response = await fetch(`${apiUrl}&q=${city}&appid=${apiKey}`);
-      var data = await response.json();
-      console.log(data);
-      // return data;
-      document.querySelector("#location").innerHTML = data.name;
-      document.getElementById("temp").innerHTML = Math.round(data.main.temp);
-      document.getElementById("humidity-value").innerHTML = data.main.humidity;
-      document.getElementById("wind-speed").innerHTML = data.wind.speed;
-      if(data.weather[0].main == "Clouds"){
-        weatherIcon.src = "./Assets/cloud.svg";
-      }
-      else if(data.weather[0].main == "Clear"){
-        weatherIcon.src = "./Assets/clear.svg";
-      }
-      else if(data.weather[0].main == "Rain"){
-        weatherIcon.src = "./Assets/rainy.svg";
-      }
-      else if(data.weather[0].main == "Drizzle"){
-        weatherIcon.src = "./Assets/dizzle.svg";
-      }
-      else if(data.weather[0].main == "Mist"){
-        weatherIcon.src = "./Assets/Mist.svg";
-      }
-    }
-    getWeatherData(document.querySelector("#location").innerHTML);
-    
-    btn.addEventListener("click", () => {
-      getWeatherData(city.value);
-    });
-  </script>
+        <div id="container2-body">
+          <!-- Top section of the body -->
+          <div id="body-top">
+            <img
+              id="locIcon"
+              width="24px"
+              height="24px"
+              src="./Assets/location.svg"
+              alt=""
+              />
+              <span id="location">Jabalpur</span>
+            <span id="date"></span>
+          </div>
+          <!-- Middle section of the body -->
+          <div id="body-mid">
+            <div id="tempreture">
+              <div id="unit">
+                <div id="temp"></div>
+              </div>
+              <div id="info">
+                <!-- Wind information -->
+                <div id="wind">
+                  <img
+                    width="24px"
+                    height="24px"
+                    src="./Assets/wind.svg"
+                    alt=""
+                    id="icon"
+                    />
+                  <div id="wind-speed"></div>
+                  <div id="wind-unit">km/h</div>
+                </div>
+                <!-- Humidity information -->
+                <div id="humidity">
+                  <img
+                    width="24px"
+                    height="24px"
+                    src="./Assets/humidity.svg"
+                    alt=""
+                    id="icon"
+                  />
+                  <div id="humidity-value"></div>
+                  <div id="humidity-unit">%</div>
+                </div>
+              </div>
+            </div>
+            <!-- Weather icon display -->
+            <div id="weather-icon">
+              <img
+                width="160px"
+                height="160px"
+                src="./Assets/clear.svg"
+                alt="weather"
+                id="W-icon"
+                />
+                <span id="weather-detail"></span>
+              </div>
+            </div>
+          </div>
+      </body>
+  <script src="./WeatherApp.js"></script>
 </html>
